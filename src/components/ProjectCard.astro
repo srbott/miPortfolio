@@ -1,0 +1,50 @@
+---
+import type { technology } from './TeckStackList.astro';
+import TeckStackList from './TeckStackList.astro';
+interface Props {
+  title: string;
+  techStack?: technology[];
+  href?: string;
+}
+
+const { href, title, techStack } = Astro.props;
+---
+
+<article>
+  <!-- <title>
+    {href === undefined ? title : (<a href={href}></a>)}
+  </title> -->
+  <section class="projectContext">
+    <slot name="projectContext"></slot>
+  </section>
+  <section class="projectResponsibilities">
+    <slot name="responsibilities"></slot>
+  </section>
+  <section class="projectAchievements">
+    <slot name="achievements"></slot>
+  </section>
+  {techStack && <TeckStackList techStack={techStack}></TeckStackList>}
+</article>
+
+<style>
+  
+  .projectContext:has(*)::before {
+    content: "Contexto";
+  }
+
+  .projectResponsibilities:has(*)::before {
+    content: "Responsabilidades";
+  }
+
+  .projectAchievements:has(*)::before {
+    content: "Logros";
+  }
+
+  section::before{
+    font-size: 1rem;
+    display: inline;
+    font-weight: 600;
+    margin: 0 0 2px 0;
+  }
+
+</style>

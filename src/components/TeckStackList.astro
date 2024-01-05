@@ -1,0 +1,23 @@
+---
+export interface technology {
+	name: string,
+	icon: string,
+	ref?: URL
+}
+
+interface Props {
+	techStack: technology[];
+}
+
+const { techStack } = Astro.props;
+---
+
+<strong>Stack Tecnológico:</strong>
+<ul>
+	{techStack.map(tech => 
+		<li>{tech.name}</li>
+	)}
+</ul>
+
+<style>
+</style>
