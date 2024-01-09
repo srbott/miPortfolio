@@ -89,3 +89,30 @@ export const InjuriesStack: technology[] = [
     icon: ""
   }
 ]
+
+export const transversalStack: technology[] = [
+  {
+    name: "Git",
+    icon: ""
+  },
+  {
+    name: "Docker",
+    icon: ""
+  },
+  {
+    name: "Sonar",
+    icon: ""
+  },
+  {
+    name: "Jenkins",
+    icon: ""
+  },
+  {
+    name: "Mockflow",
+    icon: ""
+  },
+  {
+    name: "Jira",
+    icon: ""
+  }
+]

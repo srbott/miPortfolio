@@ -1,9 +1,6 @@
 ---
-import ProjectCard from '../components/ProjectCard.astro';
-import TeckStackList from '../components/TeckStackList.astro';
-import { ECCStack, InjuriesStack } from '../constantes';
+import TecnovaExperience from '../components/TecnovaExperience.astro';
 import '../styles/main.css';
-
 ---
 <!doctype html>
 <html lang="en">
@@ -19,68 +16,12 @@ import '../styles/main.css';
     <h1>Portfolio Andrés López Cardenás</h1>
     <h2>desarrollador full stack</h2>
     <main>
-      <section class="experienceSection">
+      <section class="experience">
         <h3>Experiencia laboral</h3>
-        <article class="tecnovaExperience">
-          <header>
-            <h4>Tecnova Ingeniería y Sistemas</h4>
-          </header>
-          <main>
-            <p>
-              Como desarrollador full stack, pero principalmente encargado del front end formo parte
-              de un equipo que lleva tres proyectos para el Servicio Andaluz de Saluz(SAS).
-            </p>
-
-            <ProjectCard title='Estación de enfería' techStack={ECCStack}>
-              <p slot="projectContext">
-                Proyecto ya maduro con más de 10 años e implantado en todos los hospitales del SAS en he realizado tanto tareas verticales como de backend y frontend.
-              </p>
-              <p slot="achievements">
-                Entre las tareas completadas más relevantes se encuentra la remodelación del mapa de camas y de gran parte de su lógica, funcionalidad core
-                a partir de la cual se accede al resto de funcionalidades. También la moficación el sistema por el cual se
-                abrían todas las funcionalidades, pasando de abrirse en iframes a realizar navegación, solucionando
-                problemas derivados de la pérdida del aislamiento que ofrecen los iframes con el resto de código.
-              </p>
-            </ProjectCard>
-
-
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <section>
-
-              <TeckStackList techStack={ECCStack}></TeckStackList>
-            </section>
-            <section class="InjuriesAdmisionProjects">
-              <p>
-                <strong>Módulos centralizados para la gestión de heridas y admisión de urgencias:</strong>
-                El MVP del módulo de heridas se puso en producción en verano y el proyecto continua en desarrollo,
-                en cuanto al de admisión su MVP esta en desarrollado.
-              </p>
-              <p>
-                Encargado principalmente de frontend, con responsabilidades como configuración del
-                proyecto, lo que incluye npm, test, nginx como reverse proxy y server, análisis y desarrollo de componentes necesarios,
-                desarrollo de test E2E y unitarios, documentación, soporte a otros desarrolladores,
-                integración con el backend mediante REST aplicando la especicación fhir R4 y R5, etc.         
-              </p>
-              </ul>
-              <TeckStackList techStack={InjuriesStack}></TeckStackList>
-            </section>
-          </main>
-        </article>
+        <TecnovaExperience></TecnovaExperience>
+      </section>
+      <section class="education">
+        
       </section>
     </main>
   </body>

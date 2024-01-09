@@ -1,0 +1,53 @@
+---
+import { ECCStack, InjuriesStack, transversalStack } from "../constantes";
+import ProjectCard from "./ProjectCard.astro";
+import TeckStackList from "./TeckStackList.astro";
+---
+
+<article>
+  <h4>Tecnova Ingeniería y Sistemas</h4>
+  <p>
+    Como desarrollador full stack, pero principalmente encargado del front end formo parte
+    de un equipo que lleva tres proyectos para el Servicio Andaluz de Saluz(SAS).
+  </p>
+
+  <ProjectCard title='Estación de enfería' techStack={ECCStack}>
+    <p slot="projectContext">
+      Proyecto ya maduro con más de 10 años e implantado en todos los hospitales del SAS en he realizado tanto tareas verticales como de backend y frontend.
+    </p>
+    <p slot="achievements">
+      Entre las tareas completadas más relevantes se encuentra la remodelación del mapa de camas y de gran parte de su lógica, funcionalidad core
+      a partir de la cual se accede al resto de funcionalidades. También la moficación el sistema por el cual se
+      abrían todas las funcionalidades, pasando de abrirse en iframes a realizar navegación, solucionando
+      problemas derivados de la pérdida del aislamiento que ofrecen los iframes con el resto de código.
+    </p>
+  </ProjectCard>
+
+  <ProjectCard title='Módulos centralizados para la gestión de heridas y admisión de urgencias' techStack={InjuriesStack}>
+    <p slot="projectContext">
+      El MVP del módulo de heridas se puso en producción en verano y el proyecto continua en desarrollo,
+      en cuanto al de admisión su MVP esta en desarrollado.
+    </p>
+    <p slot="responsibilities">
+      Encargado principalmente de frontend, con responsabilidades como configuración del
+      proyecto, lo que incluye npm, test, nginx como reverse proxy y server, análisis y desarrollo de componentes necesarios,
+      desarrollo de test E2E y unitarios, documentación, soporte a otros desarrolladores,
+      integración con el backend mediante REST aplicando la especicación fhir R4 y R5, aplicar arquitectura hexagonal, etc       
+    </p>
+    <p slot="achievements">
+      Para llevar a cabo estas responsabilidades, ha sido necesaria la colaboración con los equipos de backend,
+      cuando existen necesidades que no han sido tenidas en cuenta, errores, etc. Y con el de diseño.              
+    </p>
+    <p slot="achievements">
+      Desarrollo de una app shell que usando la libería single-spa permite la integración en run time de los microfrontends
+      servidos mediante nginx.
+    </p>
+  </ProjectCard>
+  <p>
+    Por último de forma transversal a todos los proyectos he seguido la metodología scrum.
+  </p>
+  <TeckStackList techStack={transversalStack}></TeckStackList>
+</article>
+
+<style>
+</style>
